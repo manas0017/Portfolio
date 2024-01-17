@@ -1989,35 +1989,35 @@ body .ui-tooltip {
 }
 
 .fa-rotate-90 {
-	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+	filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
 	-webkit-transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
-	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+	filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
 	-webkit-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
-	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+	filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
 	-webkit-transform: rotate(270deg);
 	-ms-transform: rotate(270deg);
 	transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
-	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+	filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
 	-webkit-transform: scale(-1,1);
 	-ms-transform: scale(-1,1);
 	transform: scale(-1,1);
 }
 
 .fa-flip-vertical {
-	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+	filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
 	-webkit-transform: scale(1,-1);
 	-ms-transform: scale(1,-1);
 	transform: scale(1,-1);
@@ -4820,7 +4820,7 @@ body .ui-tooltip {
 	animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes pulsate {
+@keyframes pulsate {
 	0% {
 		opacity: .2;
 	}
@@ -4948,7 +4948,7 @@ body .ui-tooltip {
 	animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes bounce {
+@keyframes bounce {
 	0% {
 		top: -40px;
 	}
@@ -5273,7 +5273,7 @@ body,html {
 	}
 }
 
-.desktop .apps .app-icon.awards {
+.desktop .apps .app-icon.skills {
 	position: absolute;
 	top: 0;
 	left: 65px;
@@ -5606,18 +5606,19 @@ body,html {
 	margin-bottom: 0;
 }
 
-.desktop .explorer-window .window-body.about-body a,.desktop .explorer-window .window-body.contact-body a {
-	color: #ADD8E6;
-	text-decoration: none;
-}
-
-.desktop .explorer-window .window-body.awards-body,.desktop .explorer-window .window-body.work-body {
+.desktop .explorer-window .window-body.about-body a,.desktop .explorer-window .window-body.skills-body a {
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item,.desktop .explorer-window .window-body.awards-body .work-item,.desktop .explorer-window .window-body.work-body .award-item,.desktop .explorer-window .window-body.work-body .work-item {
+.desktop .explorer-window .window-body.skills-body,.desktop .explorer-window .window-body.work-body {
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.desktop .explorer-window .window-body.skills-body .award-item,.desktop .explorer-window .window-body.skills-body .work-item,.desktop .explorer-window .window-body.work-body .award-item,.desktop .explorer-window .window-body.work-body .work-item {
 	float: left;
 	padding: 5px;
 	text-align: center;
@@ -5626,18 +5627,18 @@ body,html {
 	border-radius: 4px;
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item .joe img,.desktop .explorer-window .window-body.awards-body .work-item .joe img,.desktop .explorer-window .window-body.work-body .award-item .joe img,.desktop .explorer-window .window-body.work-body .work-item .joe img {
+.desktop .explorer-window .window-body.skills-body .award-item .joe img,.desktop .explorer-window .window-body.skills-body .work-item .joe img,.desktop .explorer-window .window-body.work-body .award-item .joe img,.desktop .explorer-window .window-body.work-body .work-item .joe img {
 	padding: 25px;
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item img,.desktop .explorer-window .window-body.awards-body .work-item img,.desktop .explorer-window .window-body.work-body .award-item img,.desktop .explorer-window .window-body.work-body .work-item img {
+.desktop .explorer-window .window-body.skills-body .award-item img,.desktop .explorer-window .window-body.skills-body .work-item img,.desktop .explorer-window .window-body.work-body .award-item img,.desktop .explorer-window .window-body.work-body .work-item img {
 	width: 100%;
 	height: auto;
 	border-radius: 4px;
 	background-color: #111;
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item .name,.desktop .explorer-window .window-body.awards-body .work-item .name,.desktop .explorer-window .window-body.work-body .award-item .name,.desktop .explorer-window .window-body.work-body .work-item .name {
+.desktop .explorer-window .window-body.skills-body .award-item .name,.desktop .explorer-window .window-body.skills-body .work-item .name,.desktop .explorer-window .window-body.work-body .award-item .name,.desktop .explorer-window .window-body.work-body .work-item .name {
 	width: 100%;
 	float: left;
 	color: #f1f1f1;
@@ -5645,12 +5646,12 @@ body,html {
 	margin-top: 5px;
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item .name.work-link-2,.desktop .explorer-window .window-body.awards-body .work-item .name.work-link-2,.desktop .explorer-window .window-body.work-body .award-item .name.work-link-2,.desktop .explorer-window .window-body.work-body .work-item .name.work-link-2 {
-	width: 50%;
+.desktop .explorer-window .window-body.skills-body .award-item .name.work-link-2,.desktop .explorer-window .window-body.skills-body .work-item .name.work-link-2,.desktop .explorer-window .window-body.work-body .award-item .name.work-link-2,.desktop .explorer-window .window-body.work-body .work-item .name.work-link-2 {
+	width: 100%;
 	float: left;
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item .language,.desktop .explorer-window .window-body.awards-body .work-item .language,.desktop .explorer-window .window-body.work-body .award-item .language,.desktop .explorer-window .window-body.work-body .work-item .language {
+.desktop .explorer-window .window-body.skills-body .award-item .language,.desktop .explorer-window .window-body.skills-body .work-item .language,.desktop .explorer-window .window-body.work-body .award-item .language,.desktop .explorer-window .window-body.work-body .work-item .language {
 	float: left;
 	padding: 2.5px;
 	margin: 2.5px;
@@ -5664,31 +5665,31 @@ body,html {
 	font-weight: 400;
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item .language.one,.desktop .explorer-window .window-body.awards-body .work-item .language.one,.desktop .explorer-window .window-body.work-body .award-item .language.one,.desktop .explorer-window .window-body.work-body .work-item .language.one {
+.desktop .explorer-window .window-body.skills-body .award-item .language.one,.desktop .explorer-window .window-body.skills-body .work-item .language.one,.desktop .explorer-window .window-body.work-body .award-item .language.one,.desktop .explorer-window .window-body.work-body .work-item .language.one {
 	width: calc(100%);
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item .language.two,.desktop .explorer-window .window-body.awards-body .work-item .language.two,.desktop .explorer-window .window-body.work-body .award-item .language.two,.desktop .explorer-window .window-body.work-body .work-item .language.two {
+.desktop .explorer-window .window-body.skills-body .award-item .language.two,.desktop .explorer-window .window-body.skills-body .work-item .language.two,.desktop .explorer-window .window-body.work-body .award-item .language.two,.desktop .explorer-window .window-body.work-body .work-item .language.two {
 	width: calc(50% - 2.5px);
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item .language.three,.desktop .explorer-window .window-body.awards-body .work-item .language.three,.desktop .explorer-window .window-body.work-body .award-item .language.three,.desktop .explorer-window .window-body.work-body .work-item .language.three {
+.desktop .explorer-window .window-body.skills-body .award-item .language.three,.desktop .explorer-window .window-body.skills-body .work-item .language.three,.desktop .explorer-window .window-body.work-body .award-item .language.three,.desktop .explorer-window .window-body.work-body .work-item .language.three {
 	width: calc(33.33% - 5px);
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item .language:last-child,.desktop .explorer-window .window-body.awards-body .work-item .language:last-child,.desktop .explorer-window .window-body.work-body .award-item .language:last-child,.desktop .explorer-window .window-body.work-body .work-item .language:last-child {
+.desktop .explorer-window .window-body.skills-body .award-item .language:last-child,.desktop .explorer-window .window-body.skills-body .work-item .language:last-child,.desktop .explorer-window .window-body.work-body .award-item .language:last-child,.desktop .explorer-window .window-body.work-body .work-item .language:last-child {
 	margin-right: 0;
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item .language.no-left-margin,.desktop .explorer-window .window-body.awards-body .work-item .language.no-left-margin,.desktop .explorer-window .window-body.work-body .award-item .language.no-left-margin,.desktop .explorer-window .window-body.work-body .work-item .language.no-left-margin {
+.desktop .explorer-window .window-body.skills-body .award-item .language.no-left-margin,.desktop .explorer-window .window-body.skills-body .work-item .language.no-left-margin,.desktop .explorer-window .window-body.work-body .award-item .language.no-left-margin,.desktop .explorer-window .window-body.work-body .work-item .language.no-left-margin {
 	margin-left: 0;
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item img,.desktop .explorer-window .window-body.work-body .award-item img {
+.desktop .explorer-window .window-body.skills-body .award-item img,.desktop .explorer-window .window-body.work-body .award-item img {
 	padding: 15px;
 }
 
-.desktop .explorer-window .window-body.awards-body .award-item .name,.desktop .explorer-window .window-body.work-body .award-item .name {
+.desktop .explorer-window .window-body.skills-body .award-item .name,.desktop .explorer-window .window-body.work-body .award-item .name {
 	margin-bottom: 5px;
 }
 
