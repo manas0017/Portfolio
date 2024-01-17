@@ -5273,11 +5273,10 @@ body,html {
 	}
 }
 
-.desktop .apps .app-icon.skills {
-	position: absolute;
-	top: 0;
-	left: 65px;
+.desktop .apps .app-icon.skills{
+	position: sticky;
 }
+
 
 .desktop .info {
 	display: none;
