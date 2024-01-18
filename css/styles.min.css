@@ -1594,7 +1594,7 @@ body .ui-tooltip {
 	background-position: -176px -128px;
 }
 
-.ui-icon-contact {
+.ui-icon-skills {
 	background-position: -192px -128px;
 }
 
@@ -5346,7 +5346,7 @@ body,html {
 	position: absolute;
 	top: 50px;
 	left: 50px;
-	width: 70%;
+	width: 45%;
 	height: 55%;
 	transform: scale(.8);
 	transition: transform .5s ease;
@@ -5437,7 +5437,7 @@ body,html {
 
 .desktop .explorer-window .window-body {
 	width: 100%;
-	height: calc(100% - 30px);
+	height: auto;
 	background-color: #000;
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
@@ -5465,7 +5465,7 @@ body,html {
 	height: 380px;
 }
 
-.desktop .explorer-window .window-body.about-body,.desktop .explorer-window .window-body.contact-body {
+.desktop .explorer-window .window-body.about-body,.desktop .explorer-window .window-body.skills-body {
 	color: #f1f1f1;
 	padding: 15px!important;
 	display: -webkit-box;
@@ -5490,12 +5490,12 @@ body,html {
 	-webkit-overflow-scrolling: touch;
 }
 
-.desktop .explorer-window .window-body.about-body .thanks,.desktop .explorer-window .window-body.contact-body .thanks {
+.desktop .explorer-window .window-body.about-body .thanks,.desktop .explorer-window .window-body.skills-body .thanks {
 	display: none;
 }
 
-.desktop .explorer-window .window-body.about-body form,.desktop .explorer-window .window-body.contact-body form {
-	max-width: 600px;
+.desktop .explorer-window .window-body.about-body form,.desktop .explorer-window .window-body.skills-body form {
+	max-width: 9000px;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -5515,30 +5515,30 @@ body,html {
 	width: 100%;
 }
 
-.desktop .explorer-window .window-body.about-body form input,.desktop .explorer-window .window-body.about-body form textarea,.desktop .explorer-window .window-body.contact-body form input,.desktop .explorer-window .window-body.contact-body form textarea {
+.desktop .explorer-window .window-body.about-body form input,.desktop .explorer-window .window-body.about-body form textarea,.desktop .explorer-window .window-body.skills-body form input,.desktop .explorer-window .window-body.skills-body form textarea {
 	width: 100%;
 }
 
-.desktop .explorer-window .window-body.about-body form .honeypot,.desktop .explorer-window .window-body.contact-body form .honeypot {
+.desktop .explorer-window .window-body.about-body form .honeypot,.desktop .explorer-window .window-body.skills-body form .honeypot {
 	display: none;
 }
 
-.desktop .explorer-window .window-body.about-body form .to-from-field,.desktop .explorer-window .window-body.contact-body form .to-from-field {
+.desktop .explorer-window .window-body.about-body form .to-from-field,.desktop .explorer-window .window-body.skills-body form .to-from-field {
 	width: 100%;
 	margin-bottom: 15px;
 }
 
-.desktop .explorer-window .window-body.about-body form .to-from-field.error input,.desktop .explorer-window .window-body.contact-body form .to-from-field.error input {
+.desktop .explorer-window .window-body.about-body form .to-from-field.error input,.desktop .explorer-window .window-body.skills-body form .to-from-field.error input {
 	border: 1px solid #de5145;
 	border-left: 0;
 }
 
-.desktop .explorer-window .window-body.about-body form .to-from-field.error span,.desktop .explorer-window .window-body.contact-body form .to-from-field.error span {
+.desktop .explorer-window .window-body.about-body form .to-from-field.error span,.desktop .explorer-window .window-body.skills-body form .to-from-field.error span {
 	border: 1px solid #de5145;
 	border-right: 0;
 }
 
-.desktop .explorer-window .window-body.about-body form .to-from-field span,.desktop .explorer-window .window-body.contact-body form .to-from-field span {
+.desktop .explorer-window .window-body.about-body form .to-from-field span,.desktop .explorer-window .window-body.skills-body form .to-from-field span {
 	width: 68px;
 	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
@@ -5547,16 +5547,16 @@ body,html {
 	background-color: #ddd;
 }
 
-.desktop .explorer-window .window-body.about-body form .to-from-field input,.desktop .explorer-window .window-body.contact-body form .to-from-field input {
+.desktop .explorer-window .window-body.about-body form .to-from-field input,.desktop .explorer-window .window-body.skills-body form .to-from-field input {
 	background-color: #f1f1f1;
-	width: calc(100% - 68px);
+	width: 100%;
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }
 
-.desktop .explorer-window .window-body.about-body form .to-from-field input,.desktop .explorer-window .window-body.about-body form .to-from-field span,.desktop .explorer-window .window-body.contact-body form .to-from-field input,.desktop .explorer-window .window-body.contact-body form .to-from-field span {
+.desktop .explorer-window .window-body.about-body form .to-from-field input,.desktop .explorer-window .window-body.about-body form .to-from-field span,.desktop .explorer-window .window-body.skills-body form .to-from-field input,.desktop .explorer-window .window-body.skills-body form .to-from-field span {
 	float: left;
 	text-align: left;
 	padding: 5px;
@@ -5565,7 +5565,7 @@ body,html {
 	font-size: 1rem;
 }
 
-.desktop .explorer-window .window-body.about-body form textarea,.desktop .explorer-window .window-body.contact-body form textarea {
+.desktop .explorer-window .window-body.about-body form textarea,.desktop .explorer-window .window-body.skills-body form textarea {
 	background-color: #f1f1f1;
 	border-radius: 4px;
 	border: 0;
@@ -5575,11 +5575,11 @@ body,html {
 	resize: vertical;
 }
 
-.desktop .explorer-window .window-body.about-body form textarea.error,.desktop .explorer-window .window-body.contact-body form textarea.error {
+.desktop .explorer-window .window-body.about-body form textarea.error,.desktop .explorer-window .window-body.skills-body form textarea.error {
 	border: 1px solid #de5145;
 }
 
-.desktop .explorer-window .window-body.about-body form .contact-submit,.desktop .explorer-window .window-body.contact-body form .contact-submit {
+.desktop .explorer-window .window-body.about-body form .skills-submit,.desktop .explorer-window .window-body.skills-body form .skills-submit {
 	padding: 10px 15px;
 	border-radius: 4px;
 	font-size: 1rem;
@@ -5592,16 +5592,16 @@ body,html {
 	cursor: pointer;
 }
 
-.desktop .explorer-window .window-body.about-body *,.desktop .explorer-window .window-body.contact-body * {
+.desktop .explorer-window .window-body.about-body *,.desktop .explorer-window .window-body.skills-body * {
 	text-transform: none!important;
 	font-weight: 400!important;
 }
 
-.desktop .explorer-window .window-body.about-body p,.desktop .explorer-window .window-body.contact-body p {
+.desktop .explorer-window .window-body.about-body p,.desktop .explorer-window .window-body.skills-body p {
 	margin-bottom: 15px;
 }
 
-.desktop .explorer-window .window-body.about-body p:last-child,.desktop .explorer-window .window-body.contact-body p:last-child {
+.desktop .explorer-window .window-body.about-body p:last-child,.desktop .explorer-window .window-body.skills-body p:last-child {
 	margin-bottom: 0;
 }
 
@@ -5615,6 +5615,9 @@ body,html {
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .desktop .explorer-window .window-body.skills-body .award-item,.desktop .explorer-window .window-body.skills-body .work-item,.desktop .explorer-window .window-body.work-body .award-item,.desktop .explorer-window .window-body.work-body .work-item {
@@ -5624,6 +5627,7 @@ body,html {
 	background-color: #333;
 	margin: 15px;
 	border-radius: 4px;
+
 }
 
 .desktop .explorer-window .window-body.skills-body .award-item .joe img,.desktop .explorer-window .window-body.skills-body .work-item .joe img,.desktop .explorer-window .window-body.work-body .award-item .joe img,.desktop .explorer-window .window-body.work-body .work-item .joe img {
@@ -5634,7 +5638,7 @@ body,html {
 	width: 100%;
 	height: auto;
 	border-radius: 4px;
-	background-color: #111;
+	background-color: #050505;
 }
 
 .desktop .explorer-window .window-body.skills-body .award-item .name,.desktop .explorer-window .window-body.skills-body .work-item .name,.desktop .explorer-window .window-body.work-body .award-item .name,.desktop .explorer-window .window-body.work-body .work-item .name {
@@ -5743,3 +5747,7 @@ body,html {
 .ui-widget-header .ui-icon {
 	background-image: url(../img/ui-icons_444444_256x240.png)!important;
 }
+.my-icon{
+padding: 10px;
+}
+
